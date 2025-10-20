@@ -1,0 +1,15 @@
+service_components:
+  frontend-app:
+    department: Frontend
+  backend-api:
+    department: Backend
+  auth-service:
+    department: Backend
+  database:
+    department: DevOps
+  kubernetes:
+    department: DevOps
+  payment-service:
+    department: Backend
+  user-dashboard:
+    department: Frontend

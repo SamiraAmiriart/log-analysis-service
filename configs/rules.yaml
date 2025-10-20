@@ -1,0 +1,24 @@
+rules:
+  - name: "critical_error"
+    condition: "event.severity == 'critical' and 'error' in event.message.lower()"
+    action: "escalate"
+    severity: "critical"
+    description: "Critical error detected that requires immediate attention"
+
+  - name: "high_cpu_usage"
+    condition: "'cpu' in event.message.lower() and 'high' in event.message.lower()"
+    action: "notify"
+    severity: "warning"
+    description: "High CPU usage detected"
+
+  - name: "auth_failures"
+    condition: "'authentication' in event.message.lower() and 'fail' in event.message.lower()"
+    action: "notify"
+    severity: "warning"
+    description: "Authentication failures detected"
+
+  - name: "ignore_info"
+    condition: "event.severity == 'info'"
+    action: "ignore"
+    severity: "info"
+    description: "Info level logs are ignored by default"
