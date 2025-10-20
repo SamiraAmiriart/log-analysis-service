@@ -27,7 +27,7 @@ A production-ready log analysis service built with FastAPI, following Clean Arch
 └─────────────────┘
 
 
-## 🛠 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - Docker & Docker Compose
